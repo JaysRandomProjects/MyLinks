@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Program Manager</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #008080;
+    background-image:
+      repeating-conic-gradient(#008080 0% 25%, #017d7d 0% 50%);
+    background-size: 4px 4px;
+    font-family: "MS Sans Serif", "Tahoma", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .window {
+    width: 340px;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    box-shadow: 1px 1px 0 #000;
+  }
+
+  .titlebar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 3px 4px 3px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 0.5px;
+  }
+
+  .titlebar .title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .titlebar .icon {
+    width: 14px;
+    height: 14px;
+    background: #c0c0c0;
+    border: 1px solid #000;
+    display: inline-block;
+  }
+
+  .titlebar .controls {
+    display: flex;
+    gap: 2px;
+  }
+
+  .titlebar button {
+    width: 16px;
+    height: 14px;
+    background: #c0c0c0;
+    border: 1px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    font-size: 10px;
+    line-height: 1;
+    padding: 0;
+    font-family: monospace;
+    cursor: default;
+  }
+
+  .menubar {
+    background: #c0c0c0;
+    border-bottom: 1px solid #808080;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: flex;
+    gap: 14px;
+    color: #000;
+  }
+
+  .menubar span {
+    padding: 1px 3px;
+  }
+
+  .body {
+    padding: 14px;
+    border-top: 1px solid #808080;
+  }
+
+  .headline {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #000080;
+  }
+
+  .subline {
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 14px;
+    color: #333;
+  }
+
+  .link-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .link-btn:active {
+    border: 2px solid #000;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    padding: 9px 9px 7px 11px;
+  }
+
+  .link-btn .glyph {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    padding: 2px;
+  }
+
+  .link-btn .glyph svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .statusbar {
+    border-top: 1px solid #808080;
+    background: #c0c0c0;
+    font-size: 11px;
+    padding: 3px 8px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .statusbar .cell {
+    border: 1px solid #808080;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    padding: 1px 8px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="window">
+    <div class="titlebar">
+      <div class="title">
+        <span class="icon"></span>
+        <span>JAY.LINKS - Program Manager</span>
+      </div>
+      <div class="controls">
+        <button>_</button>
+        <button>▢</button>
+        <button>✕</button>
+      </div>
+    </div>
+
+    <div class="menubar">
+      <span>File</span>
+      <span>Options</span>
+      <span>Window</span>
+      <span>Help</span>
+    </div>
+
+    <div class="body">
+      <div class="headline">JsJayFr — Link Directory</div>
+      <div class="subline">Double-click... or just click. Select a program below.</div>
+
+      <a class="link-btn" href="https://www.roblox.com/users/8997249869/profile" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="m13.383 14.341-3.726-.958.959-3.726 3.726.959-.96 3.726zM4.913 0 0 19.088 19.088 24 24 4.912 4.912 0z"/></svg>
+        </span> Roblox
+      </a>
+
+      <a class="link-btn" href="https://steamcommunity.com/id/imjsjayfr/" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#1b2838" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61a1.9 1.9 0 0 0 1.314 1.25c1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.456-.397.957-1.497 1.41-2.454 1.011zM17.94 8.91c0-1.66-1.35-3.011-3.01-3.011-1.66 0-3.01 1.35-3.01 3.011 0 1.66 1.35 3.01 3.01 3.01 1.66 0 3.01-1.35 3.01-3.01zm-.585 0c0 1.351-1.075 2.44-2.425 2.44-1.351 0-2.427-1.089-2.427-2.44 0-1.35 1.076-2.44 2.427-2.44s2.425 1.09 2.425 2.44z"/></svg>
+        </span> Steam
+      </a>
+
+      <a class="link-btn" href="https://www.tiktok.com/@imjsjayfr?_r=1&_t=ZT-97yPFdXCSty" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+        </span> ImJsJayFr - TikTok
+      </a>
+
+      <a class="link-btn" href="https://www.tiktok.com/@jay2swag.tt?_r=1&_t=ZT-97yP8ESiZ1a" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+        </span> Jay2Swag - TikTok
+      </a>
+
+      <a class="link-btn" href="https://m.twitch.tv/imjsjayfr/home" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#9147ff" d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0 1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0Zm14.571 11.143-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+        </span> Twitch
+      </a>
+
+      <a class="link-btn" href="https://youtube.com/@imjsjayfr?si=uCR15r5Z0Qp0Z1JM" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#ff0000" d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.26 31.26 0 0 0 0 12a31.26 31.26 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.26 31.26 0 0 0 24 12a31.26 31.26 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12z"/></svg>
+        </span> ImJsJayFr - YouTube
+      </a>
+
+      <a class="link-btn" href="https://youtube.com/@jay2sawg?si=0V8lp810bg4PKGhI" target="_blank" rel="noopener noreferrer">
+        <span class="glyph">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#ff0000" d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186 31.26 31.26 0 0 0 0 12a31.26 31.26 0 0 0 .502 5.814 2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117A31.26 31.26 0 0 0 24 12a31.26 31.26 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12z"/></svg>
+        </span> Jay2Swag - YouTube
+      </a>
+    </div>
+
+    <div class="statusbar">
+      <span class="cell">7 program(s)</span>
+      <span class="cell">Ready</span>
+    </div>
+  </div>
+
+</body>
+</html>
+
